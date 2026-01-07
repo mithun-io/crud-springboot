@@ -1,4 +1,6 @@
 # crud-springboot
+ide - eclipse
+database - mysql workbench
 ## step 1: goto spring initializer.io 
 ## step 2: choose maven, language java, and provide name for you project
 ## step 3: add dependency
