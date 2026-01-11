@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>edit</title>
+</head>
+<body>
+	<div align="center">
+		<form action="update" method="post">
+		
+			<input type="hidden" name="id" th:value="${employee.id}"> <br><br>
+			<input type="text" name="name" th:value="${employee.name}"> <br><br>
+			<input type="text" name="job" th:value="${employee.job}"> <br><br>
+			<input type="number" name="salary" th:value="${employee.salary}"> <br><br>
+			<input type="date" name="hiredate" th:value="${employee.hiredate}"><br><br>
+
+			<button>edit</button>
+		</form>
+	</div>
+</body>
+</html>

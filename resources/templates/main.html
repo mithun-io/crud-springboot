@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>employee management</title>
+</head>
+<body>
+	<div align="center">
+		<form>
+			<h1>employee management</h1>
+			
+			<button formaction="add" name="add">add</button>
+			<button formaction="manage" name="manage">manage</button>
+			
+			<script type="text/javascript" th:if="${message}">
+				alert("[[${message}]]")
+			</script>
+		</form>
+	</div>
+</body>
+</html>

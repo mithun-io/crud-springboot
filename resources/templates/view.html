@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>view</title>
+</head>
+<div align="center">
+	<table border=1 cellpadding=10px cellspacing=0px>	
+		<tr>
+			<th>name</th>
+			<th>job</th>
+			<th>salary</th>
+			<th>hiredate</th>
+			<th>action</th>
+		</tr>
+		
+		<tr th:each="employee:${list}">
+		
+			<td th:text="${employee.name}"></td>
+			<td th:text="${employee.job}"></td>
+			<td th:text="${employee.salary}"></td>
+			<td th:text="${employee.hiredate}"></td>
+			
+			<td>
+				<a th:href="@{/edit(id=${employee.id})}">
+					<button>edit</button>
+				</a>
+				
+				<a th:href="@{/delete(id=${employee.id})}">
+					<button type="button">delete</button>
+				</a>
+		</tr>
+	</table>
+	<br>
+	<a href="/main">
+		<button>back</button>
+	</a>
+</div>
+	<script type="text/javascript" th:if="${message}">
+		alert("[[${message}]]")
+	</script>
+</body>
+</html>
