@@ -43,18 +43,18 @@ public class EmployeeController {
 		return "redirect:/manage";
 	}
 
-	@GetMapping("/manage")
-	public String manage(ModelMap map) {
-		List<Employee> list = repository.findAll();
-		map.put("list", list);
-		return "view.html";
-	}
-
 	@GetMapping("/delete")
 	public String delete(@RequestParam("id") Long id, RedirectAttributes attributes) {
 		repository.deleteById(id);
 		attributes.addFlashAttribute("message", "deleted sucessfully");
 		return "redirect:/manage";
+	}
+
+	@GetMapping("/manage")
+	public String manage(ModelMap map) {
+		List<Employee> list = repository.findAll();
+		map.put("list", list);
+		return "view.html";
 	}
 
 	@GetMapping("/edit")
@@ -64,3 +64,4 @@ public class EmployeeController {
 		return "edit.html";
 	}
 }
+
